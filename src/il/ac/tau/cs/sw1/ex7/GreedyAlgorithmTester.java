@@ -2,11 +2,62 @@ package il.ac.tau.cs.sw1.ex7;
 import java.util.*;
 
 public class GreedyAlgorithmTester {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+//        int[][] adjacencyMatrix = {
+//                {0, 1, 0, 1},
+//                {1, 0, 1, 0},
+//                {0, 1, 0, 1},
+//                {1, 0, 1, 0}
+//        };
+//
+//        List<Graph.Edge> edgeList = new ArrayList<>();
+//        // Add edges to the edgeList
+//
+//        Graph graph = new Graph(adjacencyMatrix.length, edgeList);
+//
+//        int node1 = 0;
+//        int node2 = 3;
+//
+//        boolean pathExists = graph.isPath(adjacencyMatrix, node1, node2);
+//        System.out.println("Path exists between Node " + node1 + " and Node " + node2 + ": " + pathExists);
+
+
+
+//        FractionalKnapSack.Item d1 = new FractionalKnapSack.Item(10, 60);
+//        FractionalKnapSack.Item d2 = new FractionalKnapSack.Item(20, 100);
+//        FractionalKnapSack.Item d3 = new FractionalKnapSack.Item(30, 120);
+//        FractionalKnapSack d = new FractionalKnapSack(50, Arrays.asList(d3, d1, d2));
+//        for (FractionalKnapSack.Item item : d.lst) {
+//            System.out.println("Weight: " + item.weight + ", Value: " + item.value);
+//        }
+//        Iterator<FractionalKnapSack.Item> dNew = d.selection();
+//        while (dNew.hasNext()) {
+//            FractionalKnapSack.Item currentItem = dNew.next();
+//            System.out.println("here" + currentItem);
+//        Graph.Edge d1 = new Graph.Edge(0,1,1);
+//        Graph.Edge d2 = new Graph.Edge(1,2,4);
+//        Graph.Edge d3 = new Graph.Edge(2,3,1);
+//        Graph.Edge d4 = new Graph.Edge(2,4,3);
+//        Graph.Edge d5 = new Graph.Edge(3,4,3);
+//        Graph.Edge d6 = new Graph.Edge(0,4,4);
+//        Graph d = new Graph(4, Arrays.asList(d1,d2,d3,d4,d5,d6));
+//        System.out.println(d.lst);
+//        Iterator<Graph.Edge> dNew = d.selection();
+//        while (dNew.hasNext()) {
+//            Graph.Edge current = dNew.next();
+//            System.out.println(current);
+//        }
+
+
+
+
+
+
         coinsTest();
-        fksTest();
+            fksTest();
         mstTest();
-    }
+        }
+
     public static void coinsTest(){
         System.out.println((new Coins(1)).greedyAlgorithm().equals(Arrays.asList(1)));
         System.out.println((new Coins(19)).greedyAlgorithm().equals(Arrays.asList(10,5,2,2)));

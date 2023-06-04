@@ -3,7 +3,7 @@ package il.ac.tau.cs.sw1.ex7;
 import java.util.*;
 
 
-public interface Greedy<T>{
+public interface Greedy<T> {
 
     /**
      * A selection function, which chooses the best candidate to be added to the solution
@@ -28,7 +28,21 @@ public interface Greedy<T>{
     /**
      * The Greedy Algorithm
      */
-    default List<T> greedyAlgorithm(){
+    default List<T> greedyAlgorithm() {
+
+        List<T> candidatesList = new ArrayList<>();
+        Iterator<T> iterator = selection();
+
+        while (iterator.hasNext()) {
+            T element = iterator.next();
+            if (feasibility(candidatesList, element)) {
+                assign(candidatesList, element);
+            }
+            if (solution(candidatesList)) {
+                return candidatesList;
+            }
+        }
+
         return null;
     }
 }
